@@ -594,5 +594,14 @@ cmp.setup {
   },
 }
 
+vim.api.nvim_create_autocmd({ "TermOpen", "BufEnter" }, {
+    pattern = { "*" },
+    callback = function()
+        if vim.opt.buftype:get() == "terminal" then
+            vim.cmd(":startinsert")
+        end
+    end
+})
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

@@ -8,6 +8,9 @@
     jetbrains.rider
     infisical
     stats
+    # shell_gpt
+    awscli
+    doctl
     (pkgs.nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
    ];
 
@@ -34,7 +37,7 @@
 
   programs.eza = {
     enable = true;
-    enableAliases = true;
+    # enableAliases = true;
     git = true;
     icons = true;
   };  
@@ -99,6 +102,7 @@
       disable_ligatures = "never";
       confirm_os_window_close = "0";
     };
+    extraConfig = "background_opacity 0.9";
     shellIntegration.enableZshIntegration = true;
   };
 
