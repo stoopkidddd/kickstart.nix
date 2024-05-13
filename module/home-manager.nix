@@ -11,6 +11,7 @@
     # shell_gpt
     awscli
     doctl
+    cascadia-code
     (pkgs.nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
    ];
 
@@ -91,7 +92,7 @@
   programs.kitty = {
     enable = true;
     font = {
-      name = "FiraCode";
+      name = "Cascadia Code NF";
       size = 18;
     };
     theme = "Broadcast";
