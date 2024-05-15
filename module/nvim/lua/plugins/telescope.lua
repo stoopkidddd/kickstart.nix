@@ -2,26 +2,30 @@ return {
   "nvim-telescope/telescope.nvim",
   opts = {
     defaults = {
-      path_display = { "smart" },
-      -- layout_strategy = "flex",
+      layout_strategy = "center",
       layout_config = {
-        vertical = { width = 0.8 },
-
         prompt_position = "top",
+        width = 0.7,
+        anchor = "N",
+        horizontal = {
+          mirror = false,
+        },
+        vertical = {
+          mirror = false,
+        },
       },
-    },
-    pickers = {
-      find_files = {
-        theme = "dropdown",
-      },
-      git_files = {
-        theme = "dropdown",
-      },
+
+      path_display = { "smart" },
     },
     keys = {
       -- change a keymap
       {
         "<leader><space>",
+        "<cmd>lua require('telescope').builtin.find_files({ cwd = vim.fn.getcwd() })",
+        desc = "Find Files",
+      },
+      {
+        "<leader>sf",
         "<cmd>lua require('telescope').builtin.find_files({ cwd = vim.fn.getcwd() })",
         desc = "Find Files",
       },
