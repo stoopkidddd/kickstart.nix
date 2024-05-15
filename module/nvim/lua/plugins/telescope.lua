@@ -18,5 +18,13 @@ return {
         theme = "dropdown",
       },
     },
+    keys = {
+      -- change a keymap
+      {
+        "<leader><space>",
+        "<cmd>lua require('telescope').builtin.find_files({ cwd = vim.fn.getcwd() })",
+        desc = "Find Files",
+      },
+    },
   },
 }

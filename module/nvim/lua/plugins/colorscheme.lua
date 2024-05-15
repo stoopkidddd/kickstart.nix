@@ -13,4 +13,10 @@ return {
   { "shaunsingh/nord.nvim" },
   { "olimorris/onedarkpro.nvim" },
   { "sainnhe/sonokai" },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "carbonfox",
+    },
+  },
 }
