@@ -3,3 +3,5 @@
 -- Add any additional options here
 
 vim.filetype.add({ extension = { templ = "templ" } })
+
+vim.opt.clipboard = ""

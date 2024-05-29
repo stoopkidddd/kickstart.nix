@@ -21,12 +21,16 @@ return {
       -- change a keymap
       {
         "<leader><space>",
-        "<cmd>lua require('telescope').builtin.find_files({ cwd = vim.fn.getcwd() })",
+        function()
+          require("telescope").extensions.smart_open.smart_open()
+        end,
         desc = "Find Files",
       },
       {
         "<leader>sf",
-        "<cmd>lua require('telescope').builtin.find_files({ cwd = vim.fn.getcwd() })",
+        function()
+          require("telescope").extensions.smart_open.smart_open()
+        end,
         desc = "Find Files",
       },
     },
