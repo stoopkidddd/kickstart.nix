@@ -12,8 +12,16 @@
     awscli
     doctl
     cascadia-code
+    localsend
+    obsidian
+    sqlite
     (pkgs.nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
    ];
+
+
+  home.sessionVariables = {
+    LIBSQLITE = "${pkgs.sqlite.out}/lib/libsqlite3.dylib";
+  };
 
   programs.git = {
     enable = true;
@@ -58,6 +66,12 @@
 
   programs.neovim = {
     enable = true;
+    plugins = [
+    {
+      plugin = pkgs.vimPlugins.sqlite-lua;
+      config = "let g:sqlite_clib_path = '${pkgs.sqlite.out}/lib/libsqlite3.dylib'";
+    }
+    ];
   };
 
   home.file."./.config/nvim/" = {
@@ -86,10 +100,18 @@
     mouse = true;
     newSession = true;
     shell = "\${pkgs.zsh}/bin/zsh";
-    # terminal = "screen";
+
+    plugins = with pkgs; [
+      tmuxPlugins.catppuccin
+    ];
+
+    extraConfig = ''
+       set -g @catppuccin_flavour 'mocha' 
+    '';
+    terminal = "screen";
   };
-  
-  programs.kitty = {
+
+    programs.kitty = {
     enable = true;
     font = {
       name = "Cascadia Code NF";
