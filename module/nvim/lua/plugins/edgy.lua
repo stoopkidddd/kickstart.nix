@@ -6,6 +6,9 @@ return {
     vim.opt.splitkeep = "screen"
   end,
   opts = {
+    animate = {
+      enabled = false,
+    },
     bottom = {
       -- toggleterm / lazyterm at the bottom with a height of 40% of the screen
       {
@@ -44,17 +47,17 @@ return {
         filter = function(buf)
           return vim.b[buf].neo_tree_source == "filesystem"
         end,
-        size = { height = 0.5 },
+        size = { width = 0.25 },
       },
-      {
-        title = "Neo-Tree Git",
-        ft = "neo-tree",
-        filter = function(buf)
-          return vim.b[buf].neo_tree_source == "git_status"
-        end,
-        pinned = true,
-        open = "Neotree position=right git_status",
-      },
+      -- {
+      --   title = "Neo-Tree Git",
+      --   ft = "neo-tree",
+      --   filter = function(buf)
+      --     return vim.b[buf].neo_tree_source == "git_status"
+      --   end,
+      --   pinned = true,
+      --   open = "Neotree position=right git_status",
+      -- },
       -- {
       --   title = "Neo-Tree Buffers",
       --   ft = "neo-tree",

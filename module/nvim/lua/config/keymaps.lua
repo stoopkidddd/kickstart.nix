@@ -5,19 +5,9 @@ vim.keymap.set("n", "<leader>T", function()
   require("toggleterm").toggle()
 end)
 
--- vim.api.nvim_set_keymap(
---   "n",
---   "<leader>tw",
---   "<cmd>lua require('neotest').run.run({ jestCommand = 'yarn jest:watch --coverage' })<cr>",
---   {}
--- )
-
-vim.api.nvim_set_keymap(
-  "n",
-  "<leader>yga",
-  "<cmd>lua require('overseer').run_template({name = \"yarn graphql:all\"})<cr>",
-  {}
-)
+vim.keymap.set("n", "<leader>yga", function()
+  require("toggleterm").exec("yarn graphql:all", 1, 0.3, vim.fn.getcwd())
+end, {})
 
 vim.api.nvim_set_keymap("n", "<leader><space>", "<cmd>Telescope smart_open<CR>", {})
 vim.api.nvim_set_keymap("n", "<leader>sf", "<cmd>Telescope smart_open<CR>", {})
