@@ -5,12 +5,12 @@ vim.keymap.set("n", "<leader>T", function()
   require("toggleterm").toggle()
 end)
 
-vim.api.nvim_set_keymap(
-  "n",
-  "<leader>tw",
-  "<cmd>lua require('neotest').run.run({ jestCommand = 'yarn jest:watch --coverage' })<cr>",
-  {}
-)
+-- vim.api.nvim_set_keymap(
+--   "n",
+--   "<leader>tw",
+--   "<cmd>lua require('neotest').run.run({ jestCommand = 'yarn jest:watch --coverage' })<cr>",
+--   {}
+-- )
 
 vim.api.nvim_set_keymap(
   "n",

@@ -4,6 +4,7 @@ return {
   opts = {
     suggestion = {
       auto_trigger = true,
+      debounce = 200,
       keymap = {
         accept = "<M-p>",
       },
