@@ -15,6 +15,7 @@
     localsend
     obsidian
     sqlite
+    syncthing
     (pkgs.nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
    ];
 
@@ -74,6 +75,10 @@
     ];
   };
 
+  services.syncthing = {
+    enable = true;
+  };
+
   home.file."./.config/nvim/" = {
     source = ./nvim;
     recursive = true;
@@ -125,7 +130,10 @@
       disable_ligatures = "never";
       confirm_os_window_close = "0";
     };
-    extraConfig = "background_opacity 0.9";
+    extraConfig = ''
+      background_opacity 0.9
+      enabled_layouts fat:bias=50;full_size=1;mirrored=false
+    '';
     shellIntegration.enableZshIntegration = true;
   };
 
@@ -144,5 +152,5 @@
     };
   };
 
-  home.stateVersion = "23.11";
+  home.stateVersion = "24.05";
 }
