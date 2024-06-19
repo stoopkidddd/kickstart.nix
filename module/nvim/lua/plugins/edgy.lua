@@ -47,17 +47,17 @@ return {
         filter = function(buf)
           return vim.b[buf].neo_tree_source == "filesystem"
         end,
-        size = { width = 0.25 },
+        size = { width = 0.2 },
       },
-      -- {
-      --   title = "Neo-Tree Git",
-      --   ft = "neo-tree",
-      --   filter = function(buf)
-      --     return vim.b[buf].neo_tree_source == "git_status"
-      --   end,
-      --   pinned = true,
-      --   open = "Neotree position=right git_status",
-      -- },
+      {
+        title = "Neo-Tree Git",
+        ft = "neo-tree",
+        filter = function(buf)
+          return vim.b[buf].neo_tree_source == "git_status"
+        end,
+        size = { width = 0.2 },
+        open = "Neotree position=right git_status",
+      },
       -- {
       --   title = "Neo-Tree Buffers",
       --   ft = "neo-tree",

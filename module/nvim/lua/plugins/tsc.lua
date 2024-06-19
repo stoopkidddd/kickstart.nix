@@ -4,7 +4,7 @@ return {
     run_as_monorepo = true,
     use_trouble_qflist = true,
     flags = {
-      watch = true,
+      watch = false,
       project = function()
         return vim.fn.getcwd() .. "tsconfig.json"
       end,
