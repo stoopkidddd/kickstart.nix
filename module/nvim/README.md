@@ -6,8 +6,19 @@ Refer to the [﻿documentation](https://lazyvim.github.io/installation) to get s
 
 
 
+[﻿README](https://app.eraser.io/workspace/iD57Bne0pFeHvX4BY6Eu) 
+
+
+
+[﻿View on canvas](https://app.eraser.io/workspace/iD57Bne0pFeHvX4BY6Eu?elements=UuqSJYIOBX6jUB4gDb79QQ) 
 
 
 
 
+<!-- eraser-additional-content -->
+## Diagrams
+<!-- eraser-additional-files -->
+<a href="/module/nvim/README-AWS threat model-1.eraserdiagram" data-element-id="QrABpqsjS-O3G2NZrvRFu"><img src="/.eraser/iD57Bne0pFeHvX4BY6Eu___iWb9hJEYSlOwSJ2bHrHqgXITp793___---diagram----322656b18c85c91744db245386cecdf7-AWS-threat-model.png" alt="" data-element-id="QrABpqsjS-O3G2NZrvRFu" /></a>
+<!-- end-eraser-additional-files -->
+<!-- end-eraser-additional-content -->
 <!--- Eraser file: https://app.eraser.io/workspace/iD57Bne0pFeHvX4BY6Eu --->
