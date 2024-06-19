@@ -16,7 +16,8 @@
     obsidian
     sqlite
     syncthing
-    (pkgs.nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
+    superfile
+    (pkgs.nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "CascadiaCode" ]; })
    ];
 
 
@@ -93,6 +94,8 @@
     };
     shellAliases = {
         lg = "lazygit";
+        ll = "superfile";
+        l = "ls -alh";
     };
   };
 
@@ -116,7 +119,7 @@
     terminal = "screen";
   };
 
-    programs.kitty = {
+  programs.kitty = {
     enable = true;
     font = {
       name = "Cascadia Code NF";
@@ -135,6 +138,37 @@
       enabled_layouts fat:bias=50;full_size=1;mirrored=false
     '';
     shellIntegration.enableZshIntegration = true;
+  };
+
+  programs.wezterm = {
+    enable = true;
+    enableZshIntegration = true;
+    extraConfig = ''
+      local config = wezterm.config_builder()
+
+      config.color_scheme = "Broadcast"
+
+      config.font = wezterm.font("Cascadia Code NF", { weight = 500 })
+      config.font_size = 16.0
+      config.freetype_load_flags = "NO_HINTING"
+      config.front_end = "OpenGL"
+
+      config.adjust_window_size_when_changing_font_size = false
+      config.use_fancy_tab_bar = false
+      config.hide_tab_bar_if_only_one_tab = true
+      config.tab_bar_at_bottom = true
+
+      config.window_padding = {
+        left = 0,
+        right = 0,
+        top = 0,
+        bottom = 0,
+      }
+
+      config.window_background_opacity = 0.9
+
+      return config
+    '';
   };
 
   programs.fzf = {
