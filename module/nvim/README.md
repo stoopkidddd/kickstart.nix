@@ -14,6 +14,10 @@ Refer to the [﻿documentation](https://lazyvim.github.io/installation) to get s
 
 
 
+[﻿kube cluster](https://app.eraser.io/workspace/7nIOtCSD6vLUGp9lhmbb) 
+
+
+
 
 <!-- eraser-additional-content -->
 ## Diagrams
