@@ -10,11 +10,9 @@ Refer to the [﻿documentation](https://lazyvim.github.io/installation) to get s
 
 
 
-[﻿View on canvas](https://app.eraser.io/workspace/iD57Bne0pFeHvX4BY6Eu?elements=UuqSJYIOBX6jUB4gDb79QQ) 
 
 
-
-[﻿kube cluster](https://app.eraser.io/workspace/7nIOtCSD6vLUGp9lhmbb) 
+![Figure 1](/.eraser/iD57Bne0pFeHvX4BY6Eu___iWb9hJEYSlOwSJ2bHrHqgXITp793___---figure---hXSQqfViB39Sm5rfJ8y0K---figure---VRaEJ5MYG3tQeGvWoeTGxA.png "Figure 1")
 
 
 
