@@ -2,25 +2,8 @@
 
 # 💤 LazyVim
 A starter template for [﻿LazyVim](https://github.com/LazyVim/LazyVim).
-Refer to the [﻿documentation](https://lazyvim.github.io/installation) to get started.
+Refer to the [﻿documentation](https://lazyvim.github.io/installation) to get started. 
 
 
 
-[﻿README](https://app.eraser.io/workspace/iD57Bne0pFeHvX4BY6Eu) 
-
-
-
-
-
-![Figure 1](/.eraser/iD57Bne0pFeHvX4BY6Eu___iWb9hJEYSlOwSJ2bHrHqgXITp793___---figure---hXSQqfViB39Sm5rfJ8y0K---figure---VRaEJ5MYG3tQeGvWoeTGxA.png "Figure 1")
-
-
-
-
-<!-- eraser-additional-content -->
-## Diagrams
-<!-- eraser-additional-files -->
-<a href="/module/nvim/README-AWS threat model-1.eraserdiagram" data-element-id="QrABpqsjS-O3G2NZrvRFu"><img src="/.eraser/iD57Bne0pFeHvX4BY6Eu___iWb9hJEYSlOwSJ2bHrHqgXITp793___---diagram----322656b18c85c91744db245386cecdf7-AWS-threat-model.png" alt="" data-element-id="QrABpqsjS-O3G2NZrvRFu" /></a>
-<!-- end-eraser-additional-files -->
-<!-- end-eraser-additional-content -->
 <!--- Eraser file: https://app.eraser.io/workspace/iD57Bne0pFeHvX4BY6Eu --->
