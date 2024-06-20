@@ -33,3 +33,6 @@ vim.keymap.set("v", "<leader>ae", "<cmd>CopilotChatExplain<CR>", { desc = "Copil
 vim.keymap.set("v", "<leader>ar", "<cmd>CopilotChatReview<CR>", { desc = "Copilot Review" })
 
 vim.keymap.set("n", "<leader>gd", "<cmd>DiffviewOpen<CR>", { desc = "Diffview Open" })
+
+vim.keymap.set("n", "<C-W>m", "<Cmd>WinShift<CR>", { desc = "WinShift" })
+vim.keymap.set("n", "<C-W>s", "<Cmd>WinShift swap<CR>", { desc = "WinShift" })
