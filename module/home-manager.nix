@@ -17,6 +17,7 @@
     sqlite
     syncthing
     superfile
+    lmstudio
     (pkgs.nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "CascadiaCode" ]; })
    ];
 
@@ -84,6 +85,12 @@
     source = ./nvim;
     recursive = true;
   };
+
+  home.file."./.config/superfile/config.toml".text = ''
+    cd_on_quit = true
+
+    default_open_file_preview = true
+  '';
  
   programs.zsh = {
     enable = true;
@@ -97,6 +104,23 @@
         ll = "superfile";
         l = "ls -alh";
     };
+    initExtra = ''
+  spf() {
+    os=$(uname -s)
+
+    # macOS
+    if [[ "$os" == "Darwin" ]]; then
+      export SPF_LAST_DIR="$HOME/Library/Application Support/superfile/lastdir"
+    fi
+
+    command spf "$@"
+
+    [ ! -f "$SPF_LAST_DIR" ] || {
+        . "$SPF_LAST_DIR"
+        rm -f -- "$SPF_LAST_DIR" > /dev/null
+    }
+  }
+    '';
   };
 
   programs.tmux = {
