@@ -17,6 +17,9 @@ return {
           jestCommand = "yarn jest:neotest -- --coverageDirectory=coverage/jest",
           jestConfigFile = "jest.config.ts",
           jest_test_discovery = false,
+          -- discovery = {
+          --   enabled = false,
+          -- },
           -- results_path = "coverage/coverage-final.json",
           env = { COVERAGE = true, NODE_ENV = "test" },
           cwd = function()
