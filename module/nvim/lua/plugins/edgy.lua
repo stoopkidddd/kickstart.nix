@@ -1,3 +1,7 @@
+local width = {
+  left = 0.25,
+}
+
 return {
   "folke/edgy.nvim",
   event = "VeryLazy",
@@ -31,7 +35,7 @@ return {
       { ft = "qf", title = "QuickFix" },
       {
         ft = "help",
-        size = { height = 20 },
+        size = { height = 0.4 },
         -- only show help buffers
         filter = function(buf)
           return vim.bo[buf].buftype == "help"
@@ -47,7 +51,7 @@ return {
         filter = function(buf)
           return vim.b[buf].neo_tree_source == "filesystem"
         end,
-        size = { width = 0.2 },
+        size = { width = width.left },
       },
       {
         title = "Neo-Tree Git",
@@ -55,8 +59,13 @@ return {
         filter = function(buf)
           return vim.b[buf].neo_tree_source == "git_status"
         end,
-        size = { width = 0.2 },
+        size = { width = width.left },
         open = "Neotree position=right git_status",
+      },
+      {
+        title = "Outline",
+        ft = "Outline",
+        size = { width = width.left },
       },
       -- {
       --   title = "Neo-Tree Buffers",
