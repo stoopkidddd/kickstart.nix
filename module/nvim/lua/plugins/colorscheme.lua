@@ -14,6 +14,12 @@ return {
   { "olimorris/onedarkpro.nvim" },
   { "sainnhe/sonokai" },
   {
+    "2giosangmitom/nightfall.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "carbonfox",
