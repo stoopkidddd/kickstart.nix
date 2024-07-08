@@ -16,7 +16,6 @@
     obsidian
     sqlite
     syncthing
-    superfile
     lmstudio
     (pkgs.nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "CascadiaCode" ]; })
    ];
@@ -86,41 +85,50 @@
     recursive = true;
   };
 
-  home.file."./.config/superfile/config.toml".text = ''
-    cd_on_quit = true
-
-    default_open_file_preview = true
-  '';
+  # home.file."./.config/superfile/config.toml".text = ''
+  #   cd_on_quit = true
+  #
+  #   default_open_file_preview = true
+  # '';
  
   programs.zsh = {
     enable = true;
-    enableAutosuggestions = true;
+    autosuggestion = { enable = true; };
     enableCompletion = true;
     oh-my-zsh = {
       enable = true;
     };
     shellAliases = {
         lg = "lazygit";
-        ll = "superfile";
+        # ll = "superfile";
         l = "ls -alh";
     };
-    initExtra = ''
-  spf() {
-    os=$(uname -s)
-
-    # macOS
-    if [[ "$os" == "Darwin" ]]; then
-      export SPF_LAST_DIR="$HOME/Library/Application Support/superfile/lastdir"
-    fi
-
-    command spf "$@"
-
-    [ ! -f "$SPF_LAST_DIR" ] || {
-        . "$SPF_LAST_DIR"
-        rm -f -- "$SPF_LAST_DIR" > /dev/null
-    }
-  }
+     initExtra = ''
+function yy() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
     '';
+  };
+
+  programs.yazi = {
+    enable = true;
+    enableZshIntegration = true;
+    settings = {
+      manager = {
+        show_hidden = true;
+      };
+      opener = {
+      edit = [{
+        run = "nvim \"$@\"";
+        block = true;
+      }];
+          };
+    };
   };
 
   programs.tmux = {
