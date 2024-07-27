@@ -9,6 +9,22 @@ vim.keymap.set("n", "<leader>yga", function()
   require("toggleterm").exec("yarn graphql:all", 1, 0.3, vim.fn.getcwd())
 end, { desc = "Generate GraphQL" })
 
+local Terminal = require("toggleterm.terminal").Terminal
+
+local omm = Terminal:new({
+  cmd = "omm",
+  direction = "float",
+  float_opts = {
+    border = "double",
+  },
+})
+
+function _omm_toggle()
+  omm:toggle()
+end
+
+vim.keymap.set("n", "<leader>N", "<cmd>lua _omm_toggle()<CR>", { noremap = true, silent = true })
+
 vim.keymap.set("n", "<leader><space>", "<cmd>Telescope smart_open<CR>", {})
 vim.keymap.set("n", "<leader>sf", "<cmd>Telescope smart_open<CR>", { desc = "Find Files" })
 

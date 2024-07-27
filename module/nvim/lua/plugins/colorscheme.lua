@@ -13,6 +13,9 @@ return {
   { "shaunsingh/nord.nvim" },
   { "olimorris/onedarkpro.nvim" },
   { "sainnhe/sonokai" },
+  { "rktjmp/lush.nvim" },
+
+  { "ab-dx/ares.nvim", name = "ares" },
   {
     "2giosangmitom/nightfall.nvim",
     lazy = false,

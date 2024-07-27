@@ -5,6 +5,7 @@ return {
   opts = {
     defaults = { formatter = "path.filename_first" },
   },
+  lazy = false,
   keys = {
       -- add a keymap to browse plugin files
       -- stylua: ignore

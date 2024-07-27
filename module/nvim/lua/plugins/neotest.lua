@@ -14,7 +14,8 @@ return {
         require("neotest-jest")({
           -- jestCommand = require("neotest-jest.jest-util").getJestCommand(vim.fn.expand("%:p:h")),
           -- jestCommand = "npx jest --coverage --detectOpenHandles --selectProjects client server -- ",
-          jestCommand = "yarn jest:neotest -- --coverageDirectory=coverage/jest",
+          jestCommand = "npx jest --coverage --coverageDirectory=coverage/jest --detectOpenHandles --selectProjects client server",
+          -- jestCommand = "yarn jest:neotest -- --coverageDirectory=coverage/jest",
           jestConfigFile = "jest.config.ts",
           jest_test_discovery = false,
           -- discovery = {
