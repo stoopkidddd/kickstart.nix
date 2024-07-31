@@ -23,7 +23,7 @@ function _omm_toggle()
   omm:toggle()
 end
 
-vim.keymap.set("n", "<leader>N", "<cmd>lua _omm_toggle()<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>N", "<cmd>lua _omm_toggle()<CR>", { noremap = true, silent = true, desc = "Task List" })
 
 vim.keymap.set("n", "<leader><space>", "<cmd>Telescope smart_open<CR>", {})
 vim.keymap.set("n", "<leader>sf", "<cmd>Telescope smart_open<CR>", { desc = "Find Files" })
