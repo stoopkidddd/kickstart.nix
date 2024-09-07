@@ -5,7 +5,6 @@
   home.packages = with pkgs; [ 
     sl
     rectangle
-    jetbrains.rider
     infisical
     stats
     # shell_gpt
@@ -17,6 +16,7 @@
     sqlite
     syncthing
     lmstudio
+    spotify
     (pkgs.nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "CascadiaCode" ]; })
    ];
 
@@ -100,7 +100,7 @@
     };
     shellAliases = {
         lg = "lazygit";
-        # ll = "superfile";
+        ll = "yazi";
         l = "ls -alh";
     };
      initExtra = ''
