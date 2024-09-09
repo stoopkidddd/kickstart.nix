@@ -5,7 +5,8 @@
   home.packages = with pkgs; [ 
     sl
     rectangle
-    infisical
+    # bitwarden-cli
+    arc-browser
     stats
     # shell_gpt
     awscli
