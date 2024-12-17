@@ -7,3 +7,5 @@ vim.filetype.add({ extension = { templ = "templ" } })
 vim.opt.clipboard = ""
 
 vim.opt.scrolloff = 10
+
+vim.g.snacks_animate = false

@@ -49,9 +49,9 @@ vim.keymap.set(
 
 vim.keymap.set("n", "<leader>fz", "<cmd>FzfLua<CR>", { desc = "Fzf Lua" })
 
-vim.keymap.set("n", "<leader>ac", "<cmd>CopilotChat<CR>", { desc = "Copilot Chat" })
-vim.keymap.set("v", "<leader>ae", "<cmd>CopilotChatExplain<CR>", { desc = "Copilot Explain" })
-vim.keymap.set("v", "<leader>ar", "<cmd>CopilotChatReview<CR>", { desc = "Copilot Review" })
+-- vim.keymap.set("n", "<leader>ac", "<cmd>CopilotChat<CR>", { desc = "Copilot Chat" })
+-- vim.keymap.set("v", "<leader>ae", "<cmd>CopilotChatExplain<CR>", { desc = "Copilot Explain" })
+-- vim.keymap.set("v", "<leader>ar", "<cmd>CopilotChatReview<CR>", { desc = "Copilot Review" })
 
 vim.keymap.set("n", "<leader>gd", "<cmd>DiffviewOpen<CR>", { desc = "Diffview Open" })
 
