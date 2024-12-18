@@ -57,3 +57,7 @@ vim.keymap.set("n", "<leader>gd", "<cmd>DiffviewOpen<CR>", { desc = "Diffview Op
 
 vim.keymap.set("n", "<C-W>m", "<Cmd>WinShift<CR>", { desc = "WinShift" })
 vim.keymap.set("n", "<C-W>s", "<Cmd>WinShift swap<CR>", { desc = "WinShift" })
+
+vim.keymap.set("n", "<leader>tt", function()
+  require("plugins.jest-testing").run_jest()
+end, { desc = "Jest Test" })
