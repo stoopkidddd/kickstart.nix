@@ -58,6 +58,16 @@ vim.keymap.set("n", "<leader>gd", "<cmd>DiffviewOpen<CR>", { desc = "Diffview Op
 vim.keymap.set("n", "<C-W>m", "<Cmd>WinShift<CR>", { desc = "WinShift" })
 vim.keymap.set("n", "<C-W>s", "<Cmd>WinShift swap<CR>", { desc = "WinShift" })
 
+local function run_jest()
+  local current_file = vim.fn.expand("%:p")
+  local command = string.format(
+    "COVERAGE=true NODE_ENV=test npx jest -c=jest.config.ts --coverage --coverageDirectory=coverage/jest --detectOpenHandles %s",
+    current_file
+  )
+
+  require("toggleterm").exec(command, 1, 0.4, vim.fn.getcwd())
+end
+
 vim.keymap.set("n", "<leader>tt", function()
-  require("plugins.jest-testing").run_jest()
+  run_jest()
 end, { desc = "Jest Test" })
