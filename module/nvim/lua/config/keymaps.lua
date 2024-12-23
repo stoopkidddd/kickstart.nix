@@ -61,7 +61,7 @@ vim.keymap.set("n", "<C-W>s", "<Cmd>WinShift swap<CR>", { desc = "WinShift" })
 local function run_jest()
   local current_file = vim.fn.expand("%:p")
   local command = string.format(
-    "COVERAGE=true NODE_ENV=test npx jest -c=jest.config.ts --coverage --coverageDirectory=coverage/jest --detectOpenHandles %s",
+    "COVERAGE=true NODE_ENV=test npx jest -c=jest.config.ts --coverage --coverageDirectory=coverage/jest %s",
     current_file
   )
 
