@@ -6,13 +6,13 @@ return {
     defaults = { formatter = "path.filename_first" },
   },
   lazy = false,
-  keys = {
-      -- add a keymap to browse plugin files
-      -- stylua: ignore
-      {
-        "<leader>G",
-        function() vim.cmd("FzfLua git_status") end,
-        desc = "Search Git Pending Changes",
-      },
-  },
+  -- keys = {
+  --     -- add a keymap to browse plugin files
+  --     -- stylua: ignore
+  --     {
+  --       "<leader>G",
+  --       function() vim.cmd("FzfLua git_status") end,
+  --       desc = "Search Git Pending Changes",
+  --     },
+  -- },
 }

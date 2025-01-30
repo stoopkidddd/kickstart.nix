@@ -1,10 +1,21 @@
-return {
-  "saghen/blink.cmp",
-  opts = {
-    completion = {
-      ghost_text = {
-        enabled = false,
-      },
-    },
-  },
-}
+return {}
+-- return {
+--   "saghen/blink.cmp",
+--   opts = {
+--     completion = {
+--       ghost_text = {
+--         enabled = false,
+--       },
+--       menu = {
+--         draw = {
+--           treesitter = { "lsp" },
+--         },
+--       },
+--       documentation = {
+--         auto_show = true,
+--         auto_show_delay_ms = 200,
+--       },
+--     },
+--     signature = { enabled = true },
+--   },
+-- }
