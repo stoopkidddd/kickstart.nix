@@ -34,3 +34,11 @@ vim.api.nvim_create_autocmd("VimEnter", {
     vim.cmd("CdGitRoot")
   end,
 })
+
+vim.api.nvim_create_autocmd("VimEnter", {
+  group = augroup("dashboard"),
+  -- pattern = { "~/kickstart.nix/*" },
+  callback = function()
+    Snacks.dashboard.open()
+  end,
+})

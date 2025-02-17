@@ -14,14 +14,10 @@ return {
       enabled = false,
     },
     bottom = {
-      -- toggleterm / lazyterm at the bottom with a height of 40% of the screen
       {
-        ft = "toggleterm",
-        size = { height = 0.3 },
-        -- exclude floating windows
-        filter = function(buf, win)
-          return vim.api.nvim_win_get_config(win).relative == ""
-        end,
+        ft = "snacks_terminal",
+        size = { height = 0.4 },
+        title = "%{b:snacks_terminal.id}: %{b:term_title}",
       },
       {
         ft = "lazyterm",
@@ -45,23 +41,27 @@ return {
     },
     left = {
       -- Neo-tree filesystem always takes half the screen height
-      {
-        title = "Neo-Tree",
-        ft = "neo-tree",
-        filter = function(buf)
-          return vim.b[buf].neo_tree_source == "filesystem"
-        end,
-        size = { width = width.left },
-      },
-      {
-        title = "Neo-Tree Git",
-        ft = "neo-tree",
-        filter = function(buf)
-          return vim.b[buf].neo_tree_source == "git_status"
-        end,
-        size = { width = width.left },
-        open = "Neotree position=right git_status",
-      },
+      -- {
+      --   ft = "snacks_picker_list",
+      --   size = { width = width.left },
+      -- },
+      -- {
+      --   title = "Neo-Tree",
+      --   ft = "neo-tree",
+      --   filter = function(buf)
+      --     return vim.b[buf].neo_tree_source == "filesystem"
+      --   end,
+      --   size = { width = width.left },
+      -- },
+      -- {
+      --   title = "Neo-Tree Git",
+      --   ft = "neo-tree",
+      --   filter = function(buf)
+      --     return vim.b[buf].neo_tree_source == "git_status"
+      --   end,
+      --   size = { width = width.left },
+      --   open = "Neotree position=right git_status",
+      -- },
       {
         title = "Outline",
         ft = "Outline",
