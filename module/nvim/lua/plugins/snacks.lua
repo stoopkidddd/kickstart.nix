@@ -4,15 +4,15 @@ return {
   opts = {
     bigfile = { enabled = true },
     quickfile = { enabled = true },
-    dashboard = {
-      enabled = true,
-      sections = {
-        { section = "header" },
-        { section = "keys", gap = 1 },
-        { icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = { 2, 2 } },
-        { section = "startup" },
-      },
-    },
+    -- dashboard = {
+    --   enabled = true,
+    --   sections = {
+    --     { section = "header" },
+    --     { section = "keys", gap = 1 },
+    --     { icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = { 2, 2 } },
+    --     { section = "startup" },
+    --   },
+    -- },
     lazygit = {
       enabled = true,
       configure = true,
@@ -40,6 +40,7 @@ return {
   -- stylua: ignore
   keys = {
     { "<leader><space>", function() Snacks.picker.smart({
+      multi = { "buffers", "recent", "git_files" },
       formatters = {
         file = {
           filename_first = true,
@@ -47,7 +48,7 @@ return {
       }
     }) end, desc = "Smart Find Files" },
     { "<leader>,", function() Snacks.picker.buffers() end, desc = "Buffers" },
-    { "<leader>/", function() Snacks.picker.grep({
+    { "<leader>/", function() Snacks.picker.git_grep({
       formatters = {
         file = {
           filename_only = true,
@@ -81,5 +82,6 @@ return {
     { "gy", function() Snacks.picker.lsp_type_definitions() end, desc = "Goto T[y]pe Definition" },
     { "<leader>ss", function() Snacks.picker.lsp_symbols() end, desc = "LSP Symbols" },
     { "<leader>sS", function() Snacks.picker.lsp_workspace_symbols() end, desc = "LSP Workspace Symbols" },
+    { "<leader>gs", function() Snacks.picker.git_status() end, desc = "Git Status"}
   },
 }

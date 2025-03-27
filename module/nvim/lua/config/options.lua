@@ -11,3 +11,7 @@ vim.opt.scrolloff = 10
 vim.g.snacks_animate = false
 
 vim.g.llama_config = { show_info = 0 }
+
+vim.g.neovide_cursor_animation_length = 0
+vim.o.guifont = "Cascadia Code NF:h16"
+-- vim.g.neovide_scale_factor = 1.5

@@ -35,10 +35,10 @@ vim.api.nvim_create_autocmd("VimEnter", {
   end,
 })
 
-vim.api.nvim_create_autocmd("VimEnter", {
-  group = augroup("dashboard"),
-  -- pattern = { "~/kickstart.nix/*" },
-  callback = function()
-    Snacks.dashboard.open()
-  end,
-})
+-- vim.api.nvim_create_autocmd("VimEnter", {
+--   group = augroup("dashboard"),
+--   -- pattern = { "~/kickstart.nix/*" },
+--   callback = function()
+--     Snacks.dashboard.open()
+--   end,
+-- })
